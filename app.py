@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from datetime import datetime
 from requests import product, mapperExpression
 from requests.product import ProductActions, InvoiceActions
@@ -72,6 +72,7 @@ def rules_testing():
         do_actions(dic_rule_to_check["Actions"], invoice_actions)
 
     dfdf = testing(product.Producto())
+    return jsonify(dfdf)
 
 
 def testing(product):
